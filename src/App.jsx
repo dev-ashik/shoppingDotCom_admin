@@ -17,6 +17,7 @@ import NewUser from "./Pages/NewUser/NewUser";
 import ProductList from "./Pages/ProductList/ProductList";
 import Product from "./Pages/Product/Product";
 import NewProduct from "./Pages/NewProduct/NewProduct";
+import Login from "./Pages/Login/Login";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Sidebar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/users" element={<UserList />} />
           <Route path="/user/:userId" element={<User />} />
           <Route path="/newUser" element={<NewUser />} />
@@ -36,38 +38,6 @@ function App() {
         </Routes>
       </div>
     </BrowserRouter>
-    // <Router>
-    //   <Topbar />
-    //   <div className="container">
-    //     <Sidebar />
-    //     <Switch>
-    //       <Route path="/" exact>
-    //         <Home />
-    //       </Route>
-    //       <Route path="/users">
-    //         <UserList />
-    //       </Route>
-    //       <Route path="/user/:userId">
-    //         <User />
-    //       </Route>
-    //       <Route path="/newUser">
-    //         <NewUser />
-    //       </Route>
-    //       <Route path="/products">
-    //         <ProductList />
-    //       </Route>
-    //       <Route path="/product/:productsId">
-    //         <Product />
-    //       </Route>
-    //       <Route path="/newproduct">
-    //         <NewProduct />
-    //       </Route>
-    //       <Route path="*">
-    //         <Notfound></Notfound>
-    //       </Route>
-    //     </Switch>
-    //   </div>
-    // </Router>
   );
 }
 
