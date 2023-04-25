@@ -15,20 +15,35 @@
   justify-content: space-between;
 }
 
-.logo {
-  font-weight: bold;
+.navbar-brand {
+  text-decoration: none;
   font-size: 30px;
-  color: darkblue;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo .logoRight {
-  color: teal;
-  font-weight: 500;
-}
 
 .topRight {
   display: flex;
   align-items: center;
+  align-items: center;
+}
+
+.Loin_button,
+.signUp_button {
+  color: var(--first-color);
+  margin: 0 .5rem;
+  padding: 2px;
+  text-decoration: none;
+  margin-bottom: 2px;
+}
+
+.Loin_button:hover,
+.signUp_button:hover {
+  margin-bottom: 0;
+  border-bottom: 2px solid var(--first-color);
 }
 
 .topbarIconsContainer {

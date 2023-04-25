@@ -5,10 +5,11 @@ import WidgetLg from "../../Components/WidgetLg/WidgetLg";
 import WidgetSm from "../../Components/WidgetSm/WidgetSm";
 import { userData } from "../../dummyData";
 import "./Home.css";
+import Layout from "../../Layout/Layout";
 
 const Home = () => {
   return (
-    <div className="home">
+    <Layout className="home">
       <FeaturedInfo />
       <Chart
         data={userData}
@@ -20,7 +21,7 @@ const Home = () => {
         <WidgetSm />
         <WidgetLg />
       </div>
-    </div>
+    </Layout>
   );
 };
 

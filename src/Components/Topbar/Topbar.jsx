@@ -3,17 +3,22 @@ import "./Topbar.css";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import LanguageIcon from "@mui/icons-material/Language";
 import SettingsIcon from "@mui/icons-material/Settings";
+import { Link } from "react-router-dom";
+import { SiShopify } from "react-icons/si";
 
 const Topbar = () => {
   return (
     <div className="topbar">
       <div className="topbarWrapper">
         <div className="topLeft">
-          <span className="logo">
-            shop<span className="logoRight">Now</span>
-          </span>
+          <Link to="/" className="navbar-brand">
+            <SiShopify />
+            <strong>.com</strong>
+          </Link>
         </div>
         <div className="topRight">
+          <Link to={'/login'} className="Loin_button">Loin</Link>
+          <Link to={'/sign-up'} className="signUp_button">Sign UP</Link>
           <div className="topbarIconsContainer">
             <NotificationsNoneIcon />
             <span className="topIconBag">2</span>

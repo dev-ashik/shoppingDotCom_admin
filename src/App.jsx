@@ -19,15 +19,19 @@ import Product from "./Pages/Product/Product";
 import NewProduct from "./Pages/NewProduct/NewProduct";
 import Login from "./Pages/Login/Login";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { AuthProvider } from "./context/Auth";
+import PrivateRoute from "./Route/PrivetRoute";
+
 function App() {
   return (
-    <BrowserRouter>
-      <Topbar />
-      <div className="container">
-      <Sidebar />
+    <AuthProvider>
+      <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
+          {/* <PrivateRoute path="/home" element={<Home />} /> */}
+          <Route path="/" element={<PrivateRoute Component={Home} />} />
           <Route path="/users" element={<UserList />} />
           <Route path="/user/:userId" element={<User />} />
           <Route path="/newUser" element={<NewUser />} />
@@ -36,8 +40,8 @@ function App() {
           <Route path="/newproduct" element={<NewProduct />} />
           <Route path="/*" element={<Notfound />} />
         </Routes>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 
