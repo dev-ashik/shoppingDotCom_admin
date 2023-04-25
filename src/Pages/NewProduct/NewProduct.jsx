@@ -1,9 +1,10 @@
 import React from "react";
 import "./NewProduct.css";
+import Layout from "../../Layout/Layout";
 
 const NewProduct = () => {
   return (
-    <div className="newProduct">
+    <Layout className="newProduct">
       <h1 className="newProductTitle">New Product</h1>
       <form className="newProductForm">
         <div className="newProductItem">
@@ -29,7 +30,7 @@ const NewProduct = () => {
           <button className="newProductButton">Create</button>
         </div>
       </form>
-    </div>
+    </Layout>
   );
 };
 

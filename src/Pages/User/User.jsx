@@ -7,10 +7,11 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LocationSearchingIcon from "@mui/icons-material/LocationSearching";
 import PublishIcon from "@mui/icons-material/Publish";
 import { Link } from "react-router-dom";
+import Layout from "../../Layout/Layout";
 
 const User = () => {
   return (
-    <div className="user">
+    <Layout className="user">
       <div className="userTitleContainer">
         <h1 className="userTitle">Edit User</h1>
         <Link to="/newUser">
@@ -117,7 +118,7 @@ const User = () => {
           </form>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 

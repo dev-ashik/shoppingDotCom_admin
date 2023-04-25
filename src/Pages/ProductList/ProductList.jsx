@@ -4,6 +4,7 @@ import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { ProductRows } from "../../dummyData";
 import { Link } from "react-router-dom";
+import Layout from "../../Layout/Layout";
 
 const ProductList = () => {
   const [data, setData] = useState(ProductRows);
@@ -59,7 +60,7 @@ const ProductList = () => {
   ];
 
   return (
-    <div className="prodictList">
+    <Layout className="prodictList">
       <DataGrid
         rows={data}
         disableSelectionOnClick
@@ -68,7 +69,7 @@ const ProductList = () => {
         rowsPerPageOptions={[5]}
         checkboxSelection
       />
-    </div>
+    </Layout>
   );
 };
 
