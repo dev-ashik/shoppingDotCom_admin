@@ -32,12 +32,31 @@ function App() {
           <Route path="/login" element={<Login />} />
           {/* <PrivateRoute path="/home" element={<Home />} /> */}
           <Route path="/" element={<PrivateRoute Component={Home} />} />
-          <Route path="/users" element={<UserList />} />
-          <Route path="/newUser" element={<NewUser />} />
-          <Route path="/user/:userId" element={<User />} />
-          <Route path="/products" element={<ProductList />} />
-          <Route path="/product/:productsId" element={<Product />} />
-          <Route path="/newproduct" element={<NewProduct />} />
+          <Route
+            path="/users"
+            element={<PrivateRoute Component={UserList} />}
+          />
+          <Route
+            path="/newUser"
+            element={<PrivateRoute Component={NewUser} />}
+          />
+          <Route
+            path="/user/:userId"
+            element={<PrivateRoute Component={User} />}
+          />
+          <Route
+            path="/products"
+            element={<PrivateRoute Component={ProductList} />}
+          />
+          <Route
+            path="/product/:productsId"
+            element={<PrivateRoute Component={Product} />}
+          />
+          <Route
+            path="/newproduct"
+            element={<PrivateRoute Component={NewProduct} />}
+          />
+
           <Route path="/*" element={<Notfound />} />
         </Routes>
       </BrowserRouter>
