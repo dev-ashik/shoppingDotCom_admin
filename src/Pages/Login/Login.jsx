@@ -75,8 +75,8 @@ const Login = () => {
               <Sidebar />
             </div>
             <div className="user_profule-content">
-              <h3>Name: {auth.user.name}</h3>
-              <p>Email: {auth.user.email}</p>
+              <h3>name: {auth.user.name}</h3>
+              <p>email: {auth.user.email}</p>
 
               <button className="primary_btn logout_btn" onClick={handleLogOut}>
                 LogOut
