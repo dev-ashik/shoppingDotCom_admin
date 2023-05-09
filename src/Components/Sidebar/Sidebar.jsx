@@ -12,6 +12,7 @@ import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutline
 import DynamicFeedOutlinedIcon from "@mui/icons-material/DynamicFeedOutlined";
 import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
 import ReportIcon from "@mui/icons-material/Report";
+import AddBoxOutlinedIcon from '@mui/icons-material/AddBoxOutlined';
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
@@ -52,14 +53,20 @@ const Sidebar = () => {
                 Products
               </li>
             </Link>
-            <li className="sidebarListItem">
+            <Link to="/newproduct" className="link">
+              <li className="sidebarListItem">
+                <AddBoxOutlinedIcon className="sidebarIcon" />
+                Create products
+              </li>
+            </Link>
+            {/* <li className="sidebarListItem">
               <AttachMoneyIcon className="sidebarIcon" />
               Transactions
-            </li>
-            <li className="sidebarListItem">
+            </li> */}
+            {/* <li className="sidebarListItem">
               <BarChartRoundedIcon className="sidebarIcon" />
               Reports
-            </li>
+            </li> */}
           </ul>
         </div>
         <div className="sidbarMenu">
@@ -85,10 +92,6 @@ const Sidebar = () => {
             <li className="sidebarListItem">
               <WorkOutlineOutlinedIcon className="sidebarIcon" />
               Manage
-            </li>
-            <li className="sidebarListItem">
-              <TimelineIcon className="sidebarIcon" />
-              Analytics
             </li>
             <li className="sidebarListItem">
               <ReportIcon className="sidebarIcon" />
